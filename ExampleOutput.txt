@@ -1,0 +1,35 @@
+===== Internal Threat Queue =====
+
+Analyst Name: Nur Syafiqah
+Expertise Area: Network Security
+Incidents Assigned:
+INC001 - Phishing
+INC002 - DDoS
+Total Impact Cost: RM 35000
+
+Analyst Name: Siti Aisyah
+Expertise Area: Digital Forensics
+Incidents Assigned:
+INC007 - Data Breach
+Total Impact Cost: RM 20000
+
+==== External Threat Queue ====
+
+Analyst Name: Amir Hakim
+Expertise Area: Malware Analysis
+Incidents Assigned:
+INC003 - Ransomware
+INCO004 - Malware
+INC - Trojan
+Total Impact Cost: RM 50000
+
+==== Critical Incident Queue ====
+
+Analyst Name: Daniel Tan
+Expertise Area: SIEM Monitoring
+Incidents Assigned:
+INC006 - DDos
+INC008 - Phishing
+INC009 - Data Brach
+INC010 - Malware
+Total Impact Cost: RM 90000

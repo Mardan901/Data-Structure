@@ -1,0 +1,100 @@
+A001|Nur Syafiqah|Digital Forensics|INC001|Ransomware|5|2026-05-10|48|50000
+A001|Nur Syafiqah|Digital Forensics|INC002|Phishing|2|2026-05-11|2|500
+A001|Nur Syafiqah|Digital Forensics|INC003|Malware|4|2026-05-11|12|15000
+A001|Nur Syafiqah|Digital Forensics|INC004|Data Breach|5|2026-05-12|72|100000
+A002|Ahmad Albab|Network Security|INC005|DDoS|4|2026-05-10|8|20000
+A002|Ahmad Albab|Network Security|INC006|Phishing|1|2026-05-11|1|100
+A003|Tan Wei Chen|SIEM Monitoring|INC007|Insider Threat|3|2026-05-12|24|10000
+A003|Tan Wei Chen|SIEM Monitoring|INC008|Malware|4|2026-05-12|12|12000
+A003|Tan Wei Chen|SIEM Monitoring|INC009|Ransomware|5|2026-05-13|48|75000
+A004|Siti Aminah|Malware Analysis|INC010|Zero-Day|5|2026-05-10|96|250000
+A005|Muhammad Haziq|Digital Forensics|INC011|Data Breach|4|2026-05-14|36|45000
+A005|Muhammad Haziq|Digital Forensics|INC012|Phishing|2|2026-05-14|3|600
+A005|Muhammad Haziq|Digital Forensics|INC013|Malware|3|2026-05-15|15|8000
+A006|Kavitha Murugan|Network Security|INC014|DDoS|4|2026-05-15|10|30000
+A006|Kavitha Murugan|Network Security|INC015|SQL Injection|5|2026-05-16|24|55000
+A007|Nurul Huda|SIEM Monitoring|INC016|Insider Threat|4|2026-05-16|48|80000
+A007|Nurul Huda|SIEM Monitoring|INC017|Phishing|1|2026-05-17|2|150
+A008|Wong Zhi Jian|Malware Analysis|INC018|Ransomware|5|2026-05-17|72|120000
+A008|Wong Zhi Jian|Malware Analysis|INC019|Malware|3|2026-05-18|18|9500
+A008|Wong Zhi Jian|Malware Analysis|INC020|Phishing|2|2026-05-18|4|800
+A009|Megat Amir|Network Security|INC021|DDoS|3|2026-05-19|6|15000
+A009|Megat Amir|Network Security|INC022|Phishing|2|2026-05-19|2|300
+A010|Karthik Arumugam|Digital Forensics|INC023|Data Breach|5|2026-05-20|80|150000
+A010|Karthik Arumugam|Digital Forensics|INC024|Zero-Day|5|2026-05-20|120|300000
+A010|Karthik Arumugam|Digital Forensics|INC025|Malware|4|2026-05-21|24|20000
+A011|Aisyah Rahman|SIEM Monitoring|INC026|Phishing|2|2026-05-21|4|1000
+A011|Aisyah Rahman|SIEM Monitoring|INC027|DDoS|4|2026-05-22|12|25000
+A011|Aisyah Rahman|SIEM Monitoring|INC028|Insider Threat|3|2026-05-22|24|15000
+A011|Aisyah Rahman|SIEM Monitoring|INC029|Malware|4|2026-05-23|18|20000
+A012|Lim Wei Ting|Network Security|INC030|Data Breach|5|2026-05-23|72|120000
+A012|Lim Wei Ting|Network Security|INC031|Phishing|1|2026-05-24|2|200
+A013|Priya Sharma|Malware Analysis|INC032|Ransomware|5|2026-05-24|48|80000
+A013|Priya Sharma|Malware Analysis|INC033|Malware|3|2026-05-25|12|5000
+A013|Priya Sharma|Malware Analysis|INC034|Zero-Day|5|2026-05-25|96|200000
+A014|Khairul Anwar|Digital Forensics|INC035|Data Breach|4|2026-05-26|36|45000
+A015|Chong Min Jie|Network Security|INC036|DDoS|3|2026-05-26|8|12000
+A015|Chong Min Jie|Network Security|INC037|SQL Injection|4|2026-05-27|24|35000
+A015|Chong Min Jie|Network Security|INC038|Phishing|2|2026-05-27|3|500
+A015|Chong Min Jie|Network Security|INC039|DDoS|4|2026-05-28|16|28000
+A015|Chong Min Jie|Network Security|INC040|Insider Threat|3|2026-05-28|20|18000
+A016|Ramesh Subramaniam|SIEM Monitoring|INC041|Phishing|1|2026-05-29|1|150
+A016|Ramesh Subramaniam|SIEM Monitoring|INC042|Malware|3|2026-05-29|10|7500
+A017|Nur Fatihah|Digital Forensics|INC043|Ransomware|5|2026-05-30|48|60000
+A017|Nur Fatihah|Digital Forensics|INC044|Data Breach|4|2026-05-30|30|40000
+A017|Nur Fatihah|Digital Forensics|INC045|Phishing|2|2026-05-31|4|800
+A018|Darren Yap|Malware Analysis|INC046|Zero-Day|5|2026-05-31|80|180000
+A019|Syed Tariq|Network Security|INC047|DDoS|4|2026-06-01|12|22000
+A019|Syed Tariq|Network Security|INC048|SQL Injection|4|2026-06-01|18|30000
+A020|Amira Natasha|SIEM Monitoring|INC049|Insider Threat|3|2026-06-02|24|15000
+A020|Amira Natasha|SIEM Monitoring|INC050|Malware|4|2026-06-02|16|14000
+A001|Nur Syafiqah|Digital Forensics|INC001|Ransomware|5|2026-05-10|48|50000
+A001|Nur Syafiqah|Digital Forensics|INC002|Phishing|2|2026-05-11|2|500
+A001|Nur Syafiqah|Digital Forensics|INC003|Malware|4|2026-05-11|12|15000
+A001|Nur Syafiqah|Digital Forensics|INC004|Data Breach|5|2026-05-12|72|100000
+A002|Ahmad Albab|Network Security|INC005|DDoS|4|2026-05-10|8|20000
+A002|Ahmad Albab|Network Security|INC006|Phishing|1|2026-05-11|1|100
+A003|Tan Wei Chen|SIEM Monitoring|INC007|Insider Threat|3|2026-05-12|24|10000
+A003|Tan Wei Chen|SIEM Monitoring|INC008|Malware|4|2026-05-12|12|12000
+A003|Tan Wei Chen|SIEM Monitoring|INC009|Ransomware|5|2026-05-13|48|75000
+A004|Siti Aminah|Malware Analysis|INC010|Zero-Day|5|2026-05-10|96|250000
+A005|Muhammad Haziq|Digital Forensics|INC011|Data Breach|4|2026-05-14|36|45000
+A005|Muhammad Haziq|Digital Forensics|INC012|Phishing|2|2026-05-14|3|600
+A005|Muhammad Haziq|Digital Forensics|INC013|Malware|3|2026-05-15|15|8000
+A006|Kavitha Murugan|Network Security|INC014|DDoS|4|2026-05-15|10|30000
+A006|Kavitha Murugan|Network Security|INC015|SQL Injection|5|2026-05-16|24|55000
+A007|Nurul Huda|SIEM Monitoring|INC016|Insider Threat|4|2026-05-16|48|80000
+A007|Nurul Huda|SIEM Monitoring|INC017|Phishing|1|2026-05-17|2|150
+A008|Wong Zhi Jian|Malware Analysis|INC018|Ransomware|5|2026-05-17|72|120000
+A008|Wong Zhi Jian|Malware Analysis|INC019|Malware|3|2026-05-18|18|9500
+A008|Wong Zhi Jian|Malware Analysis|INC020|Phishing|2|2026-05-18|4|800
+A009|Megat Amir|Network Security|INC021|DDoS|3|2026-05-19|6|15000
+A009|Megat Amir|Network Security|INC022|Phishing|2|2026-05-19|2|300
+A010|Karthik Arumugam|Digital Forensics|INC023|Data Breach|5|2026-05-20|80|150000
+A010|Karthik Arumugam|Digital Forensics|INC024|Zero-Day|5|2026-05-20|120|300000
+A010|Karthik Arumugam|Digital Forensics|INC025|Malware|4|2026-05-21|24|20000
+A011|Aisyah Rahman|SIEM Monitoring|INC026|Phishing|2|2026-05-21|4|1000
+A011|Aisyah Rahman|SIEM Monitoring|INC027|DDoS|4|2026-05-22|12|25000
+A011|Aisyah Rahman|SIEM Monitoring|INC028|Insider Threat|3|2026-05-22|24|15000
+A011|Aisyah Rahman|SIEM Monitoring|INC029|Malware|4|2026-05-23|18|20000
+A012|Lim Wei Ting|Network Security|INC030|Data Breach|5|2026-05-23|72|120000
+A012|Lim Wei Ting|Network Security|INC031|Phishing|1|2026-05-24|2|200
+A013|Priya Sharma|Malware Analysis|INC032|Ransomware|5|2026-05-24|48|80000
+A013|Priya Sharma|Malware Analysis|INC033|Malware|3|2026-05-25|12|5000
+A013|Priya Sharma|Malware Analysis|INC034|Zero-Day|5|2026-05-25|96|200000
+A014|Khairul Anwar|Digital Forensics|INC035|Data Breach|4|2026-05-26|36|45000
+A015|Chong Min Jie|Network Security|INC036|DDoS|3|2026-05-26|8|12000
+A015|Chong Min Jie|Network Security|INC037|SQL Injection|4|2026-05-27|24|35000
+A015|Chong Min Jie|Network Security|INC038|Phishing|2|2026-05-27|3|500
+A015|Chong Min Jie|Network Security|INC039|DDoS|4|2026-05-28|16|28000
+A015|Chong Min Jie|Network Security|INC040|Insider Threat|3|2026-05-28|20|18000
+A016|Ramesh Subramaniam|SIEM Monitoring|INC041|Phishing|1|2026-05-29|1|150
+A016|Ramesh Subramaniam|SIEM Monitoring|INC042|Malware|3|2026-05-29|10|7500
+A017|Nur Fatihah|Digital Forensics|INC043|Ransomware|5|2026-05-30|48|60000
+A017|Nur Fatihah|Digital Forensics|INC044|Data Breach|4|2026-05-30|30|40000
+A017|Nur Fatihah|Digital Forensics|INC045|Phishing|2|2026-05-31|4|800
+A018|Darren Yap|Malware Analysis|INC046|Zero-Day|5|2026-05-31|80|180000
+A019|Syed Tariq|Network Security|INC047|DDoS|4|2026-06-01|12|22000
+A019|Syed Tariq|Network Security|INC048|SQL Injection|4|2026-06-01|18|30000
+A020|Amira Natasha|SIEM Monitoring|INC049|Insider Threat|3|2026-06-02|24|15000
+A020|Amira Natasha|SIEM Monitoring|INC050|Malware|4|2026-06-02|16|14000

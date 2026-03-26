@@ -209,7 +209,7 @@ public class IncidentGUI extends JFrame {
                 total += i.getImpactCost();
             }
 
-            sb.append("\n Total Cost: RM ").append(String.format("%.2f", total));
+            sb.append("\n Total Cost: RM ").append(String.format("%,.2f", total));
             sb.append("\n-------------------------\n");
         }
 

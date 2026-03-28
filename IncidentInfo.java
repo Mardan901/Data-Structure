@@ -7,12 +7,12 @@
  */
 public class IncidentInfo
 {
-    protected String incidentId;
-    protected String incidentType;
-    protected int severityLevel;
-    protected String reportDate;
-    protected int estimatedResolutionTime;
-    protected double impactCost;
+    private String incidentId;
+    private String incidentType;
+    private int severityLevel;
+    private String reportDate;
+    private int estimatedResolutionTime;
+    private double impactCost;
     //constructor
     public IncidentInfo(String incidentId,String incidentType,int severityLevel,String reportDate,int ERT,double impactCost){
         this.incidentId = incidentId;
@@ -26,24 +26,29 @@ public class IncidentInfo
     public String getIncidentId(){ 
         return incidentId; 
     }
+    
     public String getIncidentType(){
         return incidentType; 
     }
+    
     public int getSeverityLevel(){ 
         return severityLevel; 
     }
+    
     public String getReportDate(){ 
         return reportDate; 
     }
+    
     public int getERT(){
         return estimatedResolutionTime; 
     }
+    
     public double getImpactCost(){ 
         return impactCost; 
     }
     //format for display
     public String toString() {
-        return String.format("[%s] %s (Sev: %d, Cost: RM%.2f)",incidentId, incidentType, severityLevel, impactCost);
+        return String.format("[%s] %s (Sev: %d, Cost: RM%,.2f)",incidentId, incidentType, severityLevel, impactCost);
     }
     
 }

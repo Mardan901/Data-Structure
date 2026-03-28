@@ -7,108 +7,74 @@
  */
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.util.*;
 import java.io.*;
+import java.text.DecimalFormat;
 
 public class IncidentGUI extends JFrame {
 
     private JTextArea outputArea;
-    private JButton loadBtn, routeBtn, stackBtn, clearBtn;
+    private JButton loadBtn, routeBtn, resolveBtn, clearBtn;
 
-    private LinkedList<AnalystInfo> analystList;
-    private Queue<AnalystInfo> internalQ, externalQ, criticalQ;
+    private LinkedList<AnalystInfo> analystList = new LinkedList<>();
+    private Queue<AnalystInfo> internalQ = new LinkedList<>();
+    private Queue<AnalystInfo> externalQ = new LinkedList<>();
+    private Queue<AnalystInfo> criticalQ = new LinkedList<>();
+
+    DecimalFormat df = new DecimalFormat("#,###.00");
 
     public IncidentGUI() {
-        setTitle("Cyber Incident Routing System");
+        setTitle("Cyber Incident Management System");
         setSize(750, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // MAIN PANEL 
-        JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
-        mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        mainPanel.setBackground(new Color(230, 240, 250));
-        add(mainPanel);
+        JPanel panel = new JPanel(new BorderLayout(10,10));
+        panel.setBackground(new Color(220,235,250));
+        add(panel);
 
-        // HEADER
-        JLabel title = new JLabel("Cyber Incident Management Dashboard", JLabel.CENTER);
+        JLabel title = new JLabel("Cybersecurity Incident Dashboard", JLabel.CENTER);
         title.setFont(new Font("Segoe UI", Font.BOLD, 20));
-        title.setForeground(new Color(30, 60, 120));
-        mainPanel.add(title, BorderLayout.NORTH);
+        title.setForeground(new Color(0,70,140));
+        panel.add(title, BorderLayout.NORTH);
 
-        // TEXT AREA 
         outputArea = new JTextArea();
         outputArea.setEditable(false);
         outputArea.setFont(new Font("Monospaced", Font.PLAIN, 13));
-        outputArea.setBackground(new Color(245, 245, 245));
-        outputArea.setForeground(new Color(40, 40, 40));
+        outputArea.setBackground(new Color(245,245,245));
 
-        JScrollPane scrollPane = new JScrollPane(outputArea);
-        scrollPane.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createLineBorder(new Color(70,130,180), 2),
-                "System Output",
-                0, 0,
-                new Font("Segoe UI", Font.BOLD, 14),
-                new Color(70,130,180)
-        ));
-        mainPanel.add(scrollPane, BorderLayout.CENTER);
+        JScrollPane scroll = new JScrollPane(outputArea);
+        panel.add(scroll, BorderLayout.CENTER);
 
-        // BUTTON PANEL 
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 10));
-        buttonPanel.setBackground(new Color(230, 240, 250));
+        JPanel btnPanel = new JPanel(new GridLayout(1,4,10,10));
+        btnPanel.setBackground(new Color(220,235,250));
 
         loadBtn = new JButton("Load Data");
-        routeBtn = new JButton("Route");
-        stackBtn = new JButton("Process Stack");
+        routeBtn = new JButton("Show Queues");
+        resolveBtn = new JButton("Process Stack");
         clearBtn = new JButton("Clear");
 
-        styleButton(loadBtn, new Color(70,130,180));
-        styleButton(routeBtn, new Color(46,204,113));
-        styleButton(stackBtn, new Color(155,89,182)); // purple
-        styleButton(clearBtn, new Color(231,76,60));
+        btnPanel.add(loadBtn);
+        btnPanel.add(routeBtn);
+        btnPanel.add(resolveBtn);
+        btnPanel.add(clearBtn);
 
-        buttonPanel.add(loadBtn);
-        buttonPanel.add(routeBtn);
-        buttonPanel.add(stackBtn);
-        buttonPanel.add(clearBtn);
+        panel.add(btnPanel, BorderLayout.SOUTH);
 
-        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
-
-        // ACTIONS
         loadBtn.addActionListener(e -> loadData());
-        routeBtn.addActionListener(e -> routeAnalysts());
-        stackBtn.addActionListener(e -> processStack());
+        routeBtn.addActionListener(e -> showQueues());
+        resolveBtn.addActionListener(e -> processStack());
         clearBtn.addActionListener(e -> outputArea.setText(""));
     }
 
-    // BUTTON STYLE 
-    private void styleButton(JButton btn, Color color) {
-        btn.setFocusPainted(false);
-        btn.setFont(new Font("Segoe UI", Font.BOLD, 14));
-        btn.setBackground(color);
-        btn.setForeground(Color.WHITE);
-
-        btn.addMouseListener(new MouseAdapter() {
-            public void mouseEntered(MouseEvent e) {
-                btn.setBackground(color.darker());
-            }
-            public void mouseExited(MouseEvent e) {
-                btn.setBackground(color);
-            }
-        });
-    }
-
-    // LOAD DATA
+    // ===== LOAD =====
     private void loadData() {
         try {
-            BufferedReader in = new BufferedReader(new FileReader("cyber_incidents.txt"));
-
-            analystList = new LinkedList<>();
+            BufferedReader br = new BufferedReader(new FileReader("cyber_incidents.txt"));
+            analystList.clear();
             String line;
 
-            while ((line = in.readLine()) != null) {
-
+            while ((line = br.readLine()) != null) {
                 StringTokenizer st = new StringTokenizer(line, "|");
 
                 String id = st.nextToken();
@@ -122,7 +88,7 @@ public class IncidentGUI extends JFrame {
                 int ert = Integer.parseInt(st.nextToken());
                 double cost = Double.parseDouble(st.nextToken());
 
-                IncidentInfo incident = new IncidentInfo(incId, type, severity, date, ert, cost);
+                IncidentInfo inc = new IncidentInfo(incId, type, severity, date, ert, cost);
 
                 AnalystInfo current = null;
 
@@ -138,28 +104,23 @@ public class IncidentGUI extends JFrame {
                     analystList.add(current);
                 }
 
-                current.addIncident(incident);
+                current.addIncident(inc);
             }
 
-            in.close();
-            outputArea.setText("✅ Data Loaded!\nClick Route next.");
+            br.close();
+            outputArea.setText("✅ Data loaded successfully.\n");
 
-        } catch (Exception ex) {
-            outputArea.setText("❌ Error: " + ex.getMessage());
+        } catch (Exception e) {
+            outputArea.setText("❌ Error loading file.");
         }
     }
 
-    // ROUTING
-    private void routeAnalysts() {
+    // ===== QUEUE =====
+    private void showQueues() {
 
-        if (analystList == null) {
-            outputArea.setText("⚠ Load data first!");
-            return;
-        }
-
-        internalQ = new LinkedList<>();
-        externalQ = new LinkedList<>();
-        criticalQ = new LinkedList<>();
+        internalQ.clear();
+        externalQ.clear();
+        criticalQ.clear();
 
         boolean toggle = true;
 
@@ -173,51 +134,100 @@ public class IncidentGUI extends JFrame {
             }
         }
 
-        outputArea.setText("✅ Routing done!\nClick Process Stack.");
+        StringBuilder sb = new StringBuilder();
+
+        displayQueue(sb, "INTERNAL QUEUE", internalQ);
+        displayQueue(sb, "EXTERNAL QUEUE", externalQ);
+        displayQueue(sb, "CRITICAL QUEUE", criticalQ);
+
+        outputArea.setText(sb.toString());
     }
 
-    // STACK PROCESS 
-    private void processStack() {
+    private void displayQueue(StringBuilder sb, String title, Queue<AnalystInfo> q) {
 
-        if (internalQ == null) {
-            outputArea.setText("⚠ Please route first!");
-            return;
-        }
+        sb.append("\n==============================\n");
+        sb.append("   ").append(title).append("\n");
+        sb.append("==============================\n");
 
-        StringBuilder sb = new StringBuilder();
-        Stack<AnalystInfo> resolvedStack = new Stack<>();
+        int num = 1;
 
-        while (!internalQ.isEmpty() || !externalQ.isEmpty() || !criticalQ.isEmpty()) {
-            processBatch(internalQ, resolvedStack, 5);
-            processBatch(externalQ, resolvedStack, 5);
-            processBatch(criticalQ, resolvedStack, 5);
-        }
+        for (AnalystInfo a : q) {
 
-        sb.append("\n===== RESOLVED STACK (LIFO) =====\n");
+            sb.append("\n[").append(num++).append("] Analyst: ")
+              .append(a.getAnalystName()).append("\n");
 
-        while (!resolvedStack.isEmpty()) {
-            AnalystInfo a = resolvedStack.pop();
-
-            sb.append("\n ").append(a.getAnalystName());
-            sb.append("\n ").append(a.getExpertiseArea());
+            sb.append("    Expertise: ").append(a.getExpertiseArea()).append("\n");
 
             double total = 0;
-            sb.append("\n Incidents: ");
+            int incNum = 1;
 
             for (IncidentInfo i : a.getIncidents()) {
-                sb.append(i.getIncidentId()).append(" ");
+
+                sb.append("    (").append(incNum++).append(") ")
+                  .append(i.getIncidentId()).append(", ")
+                  .append(i.getIncidentType()).append(", Sev:")
+                  .append(i.getSeverityLevel()).append(", Date:")
+                  .append(i.getReportDate()).append(", ERT:")
+                  .append(i.getERT()).append("h, RM ")
+                  .append(df.format(i.getImpactCost()))
+                  .append("\n");
+
                 total += i.getImpactCost();
             }
 
-            sb.append("\n Total Cost: RM ").append(String.format("%,.2f", total));
-            sb.append("\n-------------------------\n");
+            sb.append("    Total Cost: RM ").append(df.format(total)).append("\n");
+        }
+    }
+
+    // ===== STACK =====
+    private void processStack() {
+
+        Stack<AnalystInfo> stack = new Stack<>();
+
+        while (!internalQ.isEmpty() || !externalQ.isEmpty() || !criticalQ.isEmpty()) {
+            processBatch(internalQ, stack);
+            processBatch(externalQ, stack);
+            processBatch(criticalQ, stack);
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("\n==============================\n");
+        sb.append("   RESOLVED STACK (LIFO)\n");
+        sb.append("==============================\n");
+
+        int num = 1;
+
+        while (!stack.isEmpty()) {
+
+            AnalystInfo a = stack.pop();
+
+            sb.append("\n[").append(num++).append("] ")
+              .append(a.getAnalystName()).append("\n");
+
+            sb.append("    Expertise: ").append(a.getExpertiseArea()).append("\n");
+
+            double total = 0;
+
+            for (IncidentInfo i : a.getIncidents()) {
+
+                sb.append("    - ").append(i.getIncidentId()).append(", ")
+                  .append(i.getIncidentType()).append(", Sev:")
+                  .append(i.getSeverityLevel()).append(", RM ")
+                  .append(df.format(i.getImpactCost()))
+                  .append("\n");
+
+                total += i.getImpactCost();
+            }
+
+            sb.append("    Total Resolved: RM ").append(df.format(total)).append("\n");
         }
 
         outputArea.setText(sb.toString());
     }
 
-    private void processBatch(Queue<AnalystInfo> q, Stack<AnalystInfo> s, int size) {
-        for (int i = 0; i < size; i++) {
+    private void processBatch(Queue<AnalystInfo> q, Stack<AnalystInfo> s) {
+        for (int i = 0; i < 5; i++) {
             if (!q.isEmpty()) {
                 s.push(q.poll());
             }

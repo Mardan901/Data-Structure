@@ -8,10 +8,11 @@
 import java.util.*;
 public class AnalystInfo
 {
-    protected String analystId;
-    protected String analystName;
-    protected String expertiseArea;
-    protected LinkedList<IncidentInfo> incidents;
+    private String analystId;
+    private String analystName;
+    private String expertiseArea;
+    //combine incident attribute together with analyst
+    private LinkedList<IncidentInfo> incidents;
     //contructor
     public AnalystInfo(String analystId, String analystName,String expertiseArea){
         this.analystId = analystId;
@@ -27,12 +28,15 @@ public class AnalystInfo
     public String getAnalystId(){
         return analystId;
     }
+    
     public String getAnalystName(){
         return analystName;
     }
+    
     public String getExpertiseArea(){
         return expertiseArea;
     }
+    
     public List<IncidentInfo> getIncidents(){
         return incidents;
     }

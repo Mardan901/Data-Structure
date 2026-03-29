@@ -1,35 +1,43 @@
 ===== Internal Threat Queue =====
 
-Analyst Name: Nur Syafiqah
-Expertise Area: Network Security
-Incidents Assigned:
-INC001 - Phishing
-INC002 - DDoS
-Total Impact Cost: RM 35000
+[1] Analyst: Siti Aminah
+    Expertise: Malware Analysis
+    (1) INC010, Zero-Day, Sev:5, Date:2026-05-10, ERT:96h, RM 250,000.00
+    (2) INC010, Zero-Day, Sev:5, Date:2026-05-10, ERT:96h, RM 250,000.00
+    Total Cost: RM 500,000.00
 
-Analyst Name: Siti Aisyah
-Expertise Area: Digital Forensics
-Incidents Assigned:
-INC007 - Data Breach
-Total Impact Cost: RM 20000
+[2] Analyst: Darren Yap
+    Expertise: Malware Analysis
+    (1) INC046, Zero-Day, Sev:5, Date:2026-05-31, ERT:80h, RM 180,000.00
+    (2) INC046, Zero-Day, Sev:5, Date:2026-05-31, ERT:80h, RM 180,000.00
+    Total Cost: RM 360,000.00
 
 ==== External Threat Queue ====
 
-Analyst Name: Amir Hakim
-Expertise Area: Malware Analysis
-Incidents Assigned:
-INC003 - Ransomware
-INCO004 - Malware
-INC - Trojan
-Total Impact Cost: RM 50000
+[1] Analyst: Khairul Anwar
+    Expertise: Digital Forensics
+    (1) INC035, Data Breach, Sev:4, Date:2026-05-26, ERT:36h, RM 45,000.00
+    (2) INC035, Data Breach, Sev:4, Date:2026-05-26, ERT:36h, RM 45,000.00
+    Total Cost: RM 90,000.00
 
 ==== Critical Incident Queue ====
 
-Analyst Name: Daniel Tan
-Expertise Area: SIEM Monitoring
-Incidents Assigned:
-INC006 - DDos
-INC008 - Phishing
-INC009 - Data Brach
-INC010 - Malware
-Total Impact Cost: RM 90000
+[1] Analyst: Nur Syafiqah
+    Expertise: Digital Forensics
+    (1) INC001, Ransomware, Sev:5, Date:2026-05-10, ERT:48h, RM 50,000.00
+    (2) INC002, Phishing, Sev:2, Date:2026-05-11, ERT:2h, RM 500.00
+    (3) INC003, Malware, Sev:4, Date:2026-05-11, ERT:12h, RM 15,000.00
+    (4) INC004, Data Breach, Sev:5, Date:2026-05-12, ERT:72h, RM 100,000.00
+    (5) INC001, Ransomware, Sev:5, Date:2026-05-10, ERT:48h, RM 50,000.00
+    (6) INC002, Phishing, Sev:2, Date:2026-05-11, ERT:2h, RM 500.00
+    (7) INC003, Malware, Sev:4, Date:2026-05-11, ERT:12h, RM 15,000.00
+    (8) INC004, Data Breach, Sev:5, Date:2026-05-12, ERT:72h, RM 100,000.00
+    Total Cost: RM 331,000.00
+
+[2] Analyst: Ahmad Albab
+    Expertise: Network Security
+    (1) INC005, DDoS, Sev:4, Date:2026-05-10, ERT:8h, RM 20,000.00
+    (2) INC006, Phishing, Sev:1, Date:2026-05-11, ERT:1h, RM 100.00
+    (3) INC005, DDoS, Sev:4, Date:2026-05-10, ERT:8h, RM 20,000.00
+    (4) INC006, Phishing, Sev:1, Date:2026-05-11, ERT:1h, RM 100.00
+    Total Cost: RM 40,200.00
